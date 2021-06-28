@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "drone-flying"
+version = "1.0.0"
+description = "A server to fly a drone !"
+authors = ["Dan Sjkdm <sjukdompy108@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+fastapi = "^0.65.2"
+uvicorn = {extras = ["standard"], version = "^0.14.0"}
+dynaconf = "^3.1.4"
+asyncpg = "^0.23.0"
+tortoise-orm = {extras = ["asyncpg"], version = "^0.17.4"}
+uvloop = "^0.15.2"
+python-rapidjson = "^1.4"
+argon2-cffi = "^20.1.0"
+PyJWT = "^2.1.0"
+aerich = "^0.5.3"
+geopy = {extras = ["aiohttp"], version = "^2.1.0"}
+
+[tool.poetry.dev-dependencies]
+black = "^21.6b0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
