@@ -2,7 +2,7 @@ from geopy.adapters import AioHTTPAdapter
 from geopy.geocoders import Nominatim
 
 
-async def address2coords(address: str) -> dict[float, float]:
+async def address2coords(address: str) -> "dict[float, float]":
 	async with Nominatim(
 		user_agent="NoBlindEyez",
 		adapter_factory=AioHTTPAdapter,
@@ -15,3 +15,12 @@ async def address2coords(address: str) -> dict[float, float]:
 			}
 		else:
 			return None
+
+
+
+def getNearIncidents(lat, lng, radius, limit):
+	pass
+
+
+def getNearUnities(lat, lng, radius, limit):
+	pass
