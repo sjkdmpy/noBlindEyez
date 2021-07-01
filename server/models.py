@@ -26,8 +26,8 @@ class Incident(Model):
 	title        = fields.CharField(max_length=250, validators=[MinLengthValidator(10)])
 	description  = fields.TextField(validators=[MinLengthValidator(20)])
 	created_at   = fields.DatetimeField(auto_now_add=True)
-	location_id  = fields.ForeignKeyField("models.Location", related_name="location", on_delete="CASCADE")	
-	user_id      = fields.ForeignKeyField("models.User", related_name="user", on_delete="CASCADE")
+	location = fields.ForeignKeyField("models.Location", related_name="location", on_delete="CASCADE")	
+	user = fields.ForeignKeyField("models.User", related_name="user", on_delete="CASCADE")
 
 	class Meta:
 		table = "Incident"
