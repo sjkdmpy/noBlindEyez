@@ -5,7 +5,8 @@ from server.middleware.auth import AuthMiddleware
 from .routes import (
 	user,
 	auth,
-	location
+	location,
+	incident
 )
 from time import ctime
 
@@ -49,6 +50,12 @@ app.include_router(
 	location.router,
 	prefix="/api/location",
 	tags=["Location"]	
+)
+
+app.include_router(
+	incident.router,
+	prefix="/api/incident",
+	tags=["Incident"]
 )
 
 
